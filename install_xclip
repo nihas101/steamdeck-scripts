@@ -1,0 +1,10 @@
+#!/bin/bash
+
+install_xclip() {
+    echo "Installing xclip..."
+    sudo pacman -S xclip
+}
+
+sudo steamos-readonly disable
+install_xclip
+sudo steamos-readonly enable

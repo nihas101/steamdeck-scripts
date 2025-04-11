@@ -1,0 +1,10 @@
+#!/bin/bash
+
+install_lein() {
+    echo "Installing lein..."
+    lein="${HOME}/bin/lein"
+    curl httpis://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o "$lein"
+    chmod u+x "$lein"
+}
+
+install_lein

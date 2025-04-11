@@ -1,0 +1,10 @@
+#!/bin/bash
+
+install_pip() {
+    echo "Installing aardvark-dns and podman-compose..."
+    sudo pacman -S aardvark-dns podman-compose
+}
+
+sudo steamos-readonly disable
+install_pip
+sudo steamos-readonly enable

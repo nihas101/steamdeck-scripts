@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman-key --populate holo
+sudo pacman-key --refresh-keys
+
+. install_lein
+. install_neovim
+. install_xclip
+. install_podman-compose
