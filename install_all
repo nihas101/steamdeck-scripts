@@ -5,7 +5,7 @@ sudo pacman-key --populate archlinux
 sudo pacman-key --populate holo
 sudo pacman-key --refresh-keys
 
-. install_lein
-. install_neovim
-. install_xclip
-. install_podman-compose
+. scripts/install_lein
+. scripts/install_neovim
+. scripts/install_xclip
+. scripts/install_podman-compose
