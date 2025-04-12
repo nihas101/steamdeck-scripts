@@ -3,7 +3,7 @@
 - [Steamdeck Scripts](#steamdeck-scripts)
   - [General Tools](#general-tools)
     - [./scripts/install\_xclip](#scriptsinstall_xclip)
-    - [Insalling 7zz](#insalling-7zz)
+    - [Installing 7zz](#installing-7zz)
   - [Japanese Learning](#japanese-learning)
     - [./scripts/enable\_jp\_locale](#scriptsenable_jp_locale)
     - [Installing game2text](#installing-game2text)
@@ -28,7 +28,7 @@ To run all scripts, simply execute
 
 Installs xclip, which is useful for copying and pasting in and out of [neovim](https://neovim.io/), [mpv](https://mpv.io/) with stuff like [mpvacious](https://github.com/Ajatt-Tools/mpvacious) etc.
 
-### Insalling 7zz
+### Installing 7zz
 
 1. Download the newest version from the [website](https://7-zip.org/download.html)
 2. Run `tar -xf <7zz-file-name>.tar.xz`
