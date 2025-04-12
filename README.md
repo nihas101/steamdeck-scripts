@@ -8,6 +8,8 @@
     - [./scripts/enable\_jp\_locale](#scriptsenable_jp_locale)
     - [Installing game2text](#installing-game2text)
     - [Installing MPV and mpvacious](#installing-mpv-and-mpvacious)
+    - [Japanese Input](#japanese-input)
+    - [Anki](#anki)
   - [Development](#development)
     - [./scripts/install\_lein](#scriptsinstall_lein)
     - [./scripts/install\_neovim](#scriptsinstall_neovim)
@@ -55,6 +57,14 @@ LANG=ja_JP 7zz x <zip-archive>
 
 1. Install MPV through the Software Center
 2. Follow any of the tutorials out there to setup MPV and mpvacious exactly like you want. I believe the one by [Matt vs Japan](https://www.youtube.com/watch?v=bbg6ztWecbU) was the one I used as starting point.
+
+### Japanese Input
+
+You can use [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5) and `mozc Fcitx5` from the Software Center for japanese input.
+
+### Anki
+
+[Anki](https://apps.ankiweb.net/) is available from the Software Center.
 
 ## Development
 
