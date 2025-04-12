@@ -1,6 +1,6 @@
 #!/bin/bash
 
-enable_jp_locale() {
+function enable_jp_locale {
     echo "Enabling ja_JP locale..."
     sudo sed -i "s%#ja_JP.UTF-8 UTF-8%ja_JP.UTF-8 UTF-8%" /etc/locale.gen && locale-gen
 }

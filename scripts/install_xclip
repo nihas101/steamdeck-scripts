@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_xclip() {
+function install_xclip {
     echo "Installing xclip..."
     sudo pacman -S xclip
 }

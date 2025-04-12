@@ -1,9 +1,30 @@
 #!/bin/bash
 
-install_neovim() {
+function yes_or_no {
+    while true; do
+        read -p "$* [y/n]: " yn
+        case $yn in
+            [Yy]*) return 0 ;;  
+            [Nn]*) return 1 ;;
+        esac
+    done
+}
+
+function install_neovim {
+    nvim="${HOME}/bin/nvim"
+
+    if [ -e ${nvim} ]; then
+        nvim -v
+        yes_or_no "nvim is already installed, do you want to overwrite the existing installation?"
+    fi
+
+    if [ $? -ne 0 ]; then
+        echo "Aborting install of neovim."
+        return 0
+    fi
+
     version=${1:-nightly}
     echo "Installing nvim ${version}..."
-    nvim="${HOME}/bin/nvim"
     nvimurl="https://github.com/neovim/neovim/releases/download/${version}/nvim-linux-x86_64.appimage"
     mkdir -p "$(dirname "$nvim")"
     curl -fL "$nvimurl" -o "$nvim" -z "$nvim"
