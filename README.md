@@ -1,9 +1,10 @@
 # Steamdeck Scripts
 
 - [Steamdeck Scripts](#steamdeck-scripts)
-  - [General Tools](#general-tools)
+  - [General Tools \& Misc](#general-tools--misc)
     - [./scripts/install\_xclip](#scriptsinstall_xclip)
     - [Installing 7zz](#installing-7zz)
+    - [External Optical Drives](#external-optical-drives)
   - [Japanese Learning](#japanese-learning)
     - [./scripts/enable\_jp\_locale](#scriptsenable_jp_locale)
     - [Installing game2text](#installing-game2text)
@@ -22,7 +23,7 @@ To run all scripts, simply execute
 ./install_all
 ```
 
-## General Tools
+## General Tools & Misc
 
 ### ./scripts/install_xclip
 
@@ -33,6 +34,16 @@ Installs xclip, which is useful for copying and pasting in and out of [neovim](h
 1. Download the newest version from the [website](https://7-zip.org/download.html)
 2. Run `tar -xf <7zz-file-name>.tar.xz`
 3. Move `7zz` somewhere in your `$PATH`
+
+### External Optical Drives
+
+Should the steam deck fail to recognize an external optical drive, try
+```bash
+sudo modprobe sg
+```
+as referenced [here](https://www.reddit.com/r/SteamDeck/comments/17k1975/how_do_i_use_makemkv_with_my_steam_deck_desktop/) and described [here](https://forum.makemkv.com/forum/viewtopic.php?t=16939&start=90#p81635).
+
+
 
 ## Japanese Learning
 
