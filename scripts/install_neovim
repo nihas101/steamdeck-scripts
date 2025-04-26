@@ -27,8 +27,11 @@ function install_neovim {
     echo "Installing nvim ${version}..."
     nvimurl="https://github.com/neovim/neovim/releases/download/${version}/nvim-linux-x86_64.appimage"
     mkdir -p "$(dirname "$nvim")"
-    curl -fL "$nvimurl" -o "$nvim" -z "$nvim"
+    if [ -e ${nvim} ]; then
+	rm "$nvim"
+    fi
+    curl -fL "$nvimurl" -o "$nvim"
     chmod u+x "$nvim"
 }
 
-install_neovim
+install_neovim ${1}
