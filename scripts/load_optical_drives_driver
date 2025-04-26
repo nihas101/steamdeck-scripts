@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# See: https://www.reddit.com/r/SteamDeck/comments/17k1975/how_do_i_use_makemkv_with_my_steam_deck_desktop/
+sudo modprobe sg
