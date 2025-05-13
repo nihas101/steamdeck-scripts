@@ -11,6 +11,7 @@
     - [Installing MPV and mpvacious](#installing-mpv-and-mpvacious)
     - [Japanese Input](#japanese-input)
     - [Anki](#anki)
+    - [Logseq](#logseq)
   - [Development](#development)
     - [./scripts/install\_lein](#scriptsinstall_lein)
     - [./scripts/install\_neovim](#scriptsinstall_neovim)
@@ -76,6 +77,10 @@ You can use [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5) and `mozc Fcitx5` from t
 ### Anki
 
 [Anki](https://apps.ankiweb.net/) is available from the Software Center.
+
+### Logseq
+
+[Logseq](https://logseq.com/) is available from the Software Center.
 
 ## Development
 
