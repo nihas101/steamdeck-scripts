@@ -24,6 +24,15 @@ To run all scripts, simply execute
 ./install_all
 ```
 
+If you want to run the scripts individually, make sure to execute `/scripts/initialize_pacman` beforehand, to initialize pacman-key and populate it with some trusted keys otherwise you may see this error for install scripts
+```bash
+warning: Public keyring not found; have you run 'pacman-key --init'?
+downloading required keys...
+error: keyring is not writable
+error: required key missing from keyring
+error: failed to commit transaction (could not find or read file)
+```
+
 ## General Tools & Misc
 
 ### ./scripts/install_xclip
