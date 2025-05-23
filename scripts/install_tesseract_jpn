@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function install_tesseract {
+    echo "Installing tesseract, tesseract-data-jpn and tesseract-data-jpn_vert..."
+    sudo pacman -S tesseract-data-jpn tesseract-data-jpn_vert
+}
+
+sudo steamos-readonly disable
+install_tesseract
+sudo steamos-readonly enable

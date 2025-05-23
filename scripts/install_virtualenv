@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function install_virtualenv {
+    echo "Installing virtualenv..."
+    sudo pacman -S python-virtualenv
+}
+
+sudo steamos-readonly disable
+install_virtualenv
+sudo steamos-readonly enable
+

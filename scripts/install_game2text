@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# See: https://github.com/mathewthe2/Game2Text
+function make_python_3_7_4 {
+#    wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz && \
+#    tar -xf Python-3.7.4.tgz && \
+#    cd Python-3.7.4 && \
+#    ./configure && \
+#    make && \
+#    cd .. && \
+    pip install virtualenv && \
+#   curl -fsSL https://pyenv.run | bash
+    #   Add the following to your ~/.bashrc
+    #   echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    #   echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    #   echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+#   pyenv install 3.12.10
+}
+
+function make_game2text {
+    # The requirements may need to be slightly adjusted if e.g. the specific version of numpy is not available
+    # TODO: Replace == with >= in requirements.py automatically
+    # TODO: In config.ini replace `browser = default` with `browser = chromium` automatically See: https://game2text.com/faq/switch-browser/
+    pip install -r requirements.txt
+}
+
+sudo steamos-readonly disable && \
+sudo pacman base-devel glibc linux-api-headers zlib cmake python3 gcc nodejs npm libffi openssl rust tk tcl && \
+sudo steamos-readonly enable && \
+git clone https://github.com/mathewthe2/Game2Text.git && \
+cd Game2Text && \
+#virtualenv venv --python=Python-3.7.4/python && \
+#virtualenv venv --python='/home/deck/.pyenv/versions/3.12.10/bin/python' && \
+virtualenv venv --python='/usr/bin/python' && \
+source venv/bin/activate && \
+make_python_3_7_4 && \
+make_game2text && \
+deactivate
+
+# TODO: Create a script for this and put it on the path
+echo 'Run "source venv/bin/activate && python game2text.py ; deactivate" to start game2text'
