@@ -7,9 +7,11 @@
     - [External Optical Drives](#external-optical-drives)
   - [Japanese Learning](#japanese-learning)
     - [./scripts/enable\_jp\_locale](#scriptsenable_jp_locale)
-    - [Installing Game2text](#installing-game2text)
-      - [Running the Windows Build Via Bottles](#running-the-windows-build-via-bottles)
-      - [Building Game2text From Source on the Steamdeck](#building-game2text-from-source-on-the-steamdeck)
+    - [OCR](#ocr)
+      - [Installing YomiNinja](#installing-yomininja)
+      - [Installing Game2text](#installing-game2text)
+        - [Running the Windows Build Via Bottles](#running-the-windows-build-via-bottles)
+        - [Building Game2text From Source on the Steamdeck](#building-game2text-from-source-on-the-steamdeck)
     - [Installing MPV and mpvacious](#installing-mpv-and-mpvacious)
     - [Japanese Input](#japanese-input)
     - [Anki](#anki)
@@ -65,10 +67,15 @@ Enables the japanese locale on the steamdeck. Useful for learners of japanese th
 ```bash
 LANG=ja_JP 7zz x <zip-archive>
 ```
+### OCR
 
-### Installing Game2text
+#### Installing YomiNinja
 
-#### Running the Windows Build Via Bottles
+Download the latest YomiNinja [AppImage](https://github.com/matt-m-o/YomiNinja/releases) and run it. See also `./scripts/install_yomininja`
+
+#### Installing Game2text
+
+##### Running the Windows Build Via Bottles
 
 [Game2text](https://game2text.com/) can be used via [bottles](https://usebottles.com/).
 
@@ -78,7 +85,7 @@ LANG=ja_JP 7zz x <zip-archive>
 4. Setup a bottle optimized for gaming
 5. Run Game2text inside the bottle you just created
 
-#### Building Game2text From Source on the Steamdeck
+##### Building Game2text From Source on the Steamdeck
 
 See: [Game2Text](https://github.com/mathewthe2/Game2Text)
 

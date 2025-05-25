@@ -1,0 +1,36 @@
+#!/bin/bash
+
+function yes_or_no {
+    while true; do
+        read -p "$* [y/n]: " yn
+        case $yn in
+            [Yy]*) return 0 ;;  
+            [Nn]*) return 1 ;;
+        esac
+    done
+}
+
+function install_yomininja {
+    ymn="${HOME}/bin/yomininja"
+
+    if [ -e ${ymn} ]; then
+        yes_or_no "yomininja is already installed, do you want to overwrite the existing installation?"
+    fi
+
+    if [ $? -ne 0 ]; then
+        echo "Aborting install of yomininja."
+        return 0
+    fi
+
+    version=${1}
+    echo "Installing yomininja ${version}..."
+    ymnurl="https://github.com/matt-m-o/YomiNinja/releases/download/v${version}/YomiNinja-${version}.AppImage"
+    mkdir -p "$(dirname "$ymn")"
+    if [ -e ${ymn} ]; then
+	rm "$ymn"   
+    fi
+    curl -fL "$ymnurl" -o "$ymn"
+    chmod u+x "$ymn"
+}
+
+install_yomininja ${1}
