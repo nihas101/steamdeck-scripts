@@ -7,7 +7,7 @@
     - [External Optical Drives](#external-optical-drives)
   - [Japanese Learning](#japanese-learning)
     - [./scripts/enable\_jp\_locale](#scriptsenable_jp_locale)
-    - [Installing game2text](#installing-game2text)
+    - [Installing Game2text](#installing-game2text)
       - [Running the Windows Build Via Bottles](#running-the-windows-build-via-bottles)
       - [Building Game2text From Source on the Steamdeck](#building-game2text-from-source-on-the-steamdeck)
     - [Installing MPV and mpvacious](#installing-mpv-and-mpvacious)
@@ -66,20 +66,17 @@ Enables the japanese locale on the steamdeck. Useful for learners of japanese th
 LANG=ja_JP 7zz x <zip-archive>
 ```
 
-### Installing game2text
+### Installing Game2text
 
 #### Running the Windows Build Via Bottles
 
-> [!WARNING] 
-> Unfortunately attempting to run game2text on SteamOS 3.7 via bottles seems to be broken currently
-
-[game2text](https://game2text.com/) can be used via [bottles](https://usebottles.com/).
+[Game2text](https://game2text.com/) can be used via [bottles](https://usebottles.com/).
 
 1. Install bottles from the Software Center
-2. Download [game2text for windows](https://github.com/mathewthe2/Game2Text/releases)
-3. Unzip game2text `7zz x  win-game2text.zip `
+2. Download [Game2text for windows](https://github.com/mathewthe2/Game2Text/releases)
+3. Unzip Game2text `7zz x  win-game2text.zip `
 4. Setup a bottle optimized for gaming
-5. Run game2text inside the bottle you just created
+5. Run Game2text inside the bottle you just created
 
 #### Building Game2text From Source on the Steamdeck
 
@@ -89,15 +86,15 @@ Install the prerequisites
 ```bash
 # This will install tesseract and data for horizontal and vertical japanese
 ./scripts/install_tesseract_jpn
-# This will install virtualenv which we will need for building game2text from source
+# This will install virtualenv which we will need for building Game2text from source
 ./scipts/install_virtualenv
-# This will install the prerequisites to build game2text
+# This will install the prerequisites to build Game2text
 sudo steamos-readonly disable
 sudo pacman base-devel glibc linux-api-headers zlib cmake python3 gcc nodejs npm libffi openssl rust tk tcl
 sudo steamos-readonly enable
 ```
 
-Clone Game2Text and prepare its directory contents for building
+Clone Game2text and prepare its directory contents for building
 
 ```bash
 git clone https://github.com/mathewthe2/Game2Text.git
@@ -117,7 +114,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-You can now run game2text natively in `Game2Text/` via
+You can now run Game2text natively in `Game2Text/` via
 
 ```bash
 source venv/bin/activate
