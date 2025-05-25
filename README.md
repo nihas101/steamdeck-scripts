@@ -122,6 +122,25 @@ python game2text.py
 deactivate
 ```
 
+Run the following to build a distributable binary with PyInstaller
+
+```bash
+rm -rf build dist
+source venv/bin/activate
+python -m eel game2text.py web \
+--windowed \
+--onefile --noconsole \
+--icon "public/icon.icns" \
+--add-data "logs/images/temp.png:logs/images" \
+--add-data "logs/text:logs/text" \
+--add-data "anki:anki/" \
+--add-data "resources/dictionaries:resources/dictionaries/" \
+--add-data "config.ini:."
+deactivate
+```
+
+Afterwards, you can find the executable under `/dist`
+
 ### Installing MPV and mpvacious
 
 1. Install MPV through the Software Center
